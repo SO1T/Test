@@ -1,0 +1,47 @@
+.pagination {
+    list-style-type: none;
+}
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+li {
+    border: 1px solid black;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.card {
+    border: 1px solid black;
+    margin-bottom: 10px;
+    padding: 0 0 20px 0;
+    height: 100px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.box {
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.desc {
+    margin: 0px 5px 0 5px;
+    border-top: 1px solid black;
+    padding: 10px;
+}
+
+h5 {
+    margin-left: 10px;
+    padding-bottom: 0;
+    margin-bottom: 3px;
+}
