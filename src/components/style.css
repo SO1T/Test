@@ -4,6 +4,7 @@
 ul {
     display: flex;
     list-style-type: none;
+    flex-direction: row;
 }
 
 li {
@@ -18,7 +19,7 @@ li {
     padding: 0 0 20px 0;
     height: 100px;
     text-align: left;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .box {
@@ -35,7 +36,7 @@ li {
 }
 
 .desc {
-    margin: 0px 5px 0 5px;
+    margin: 0 5px 0 5px;
     border-top: 1px solid black;
     padding: 10px;
 }
