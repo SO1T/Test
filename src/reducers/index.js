@@ -1,4 +1,3 @@
-import { combineReducers }  from 'redux';
 import { LOAD_USERS } from '../actions/actionTypes';
 
 const initialState = {
