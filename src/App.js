@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect, Component } from 'react';
+import { loadUsers } from './actions';
+import { connect } from 'react-redux';
+import store from './store';
 import './App.css';
+import Card from './components/list';
 
-function App() {
+const App = (props) => {
+
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+            setLoading(true);
+            props.loadUsers();
+            setLoading(false);
+    }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className="container">
+            <h1>Users list</h1>
+            <Card />
+        </div>
     </div>
   );
-}
+};
 
-export default App;
+
+const mapStateToProps = state => ({
+    users: state.users,
+    pages: state.pages
+});
+
+export default connect(null, { loadUsers })(App);
