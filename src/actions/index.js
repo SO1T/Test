@@ -1,12 +1,13 @@
 import axios from 'axios';
-import { LOAD_USERS, REQUEST_USER_PAGE, RECEIVE_USER_PAGE } from './actionTypes';
+import { LOAD_USERS } from './actionTypes';
+import table from '../table';
 
 export const loadUsers = () => async dispatch => {
-    // fetch('http://dev.frevend.com/json/users.json').then(res => console.log(res));
-    const res = await axios.get('https://jsonplaceholder.typicode.com/todos');
+    const res = await axios.get('http://dev.frevend.com/json/users.json');// data is empty, it works with https://jsonplaceholder.typicode.com/todos
         dispatch({
             type: LOAD_USERS,
-            payload: res.data
+            payload: table
         });
     return res.data;
 };
+
