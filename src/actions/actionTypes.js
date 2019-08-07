@@ -1,0 +1,3 @@
+export const LOAD_USERS = 'LOAD_USERS';
+export const REQUEST_USER_PAGE = 'REQUEST_USER_PAGE';
+export const RECEIVE_USER_PAGE = 'RECEIVE_USER_PAGE';
